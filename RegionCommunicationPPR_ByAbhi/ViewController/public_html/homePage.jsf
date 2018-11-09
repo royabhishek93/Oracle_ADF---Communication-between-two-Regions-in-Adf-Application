@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="homePage.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+       
+        <af:panelBox text="Employees Management" id="pb1" showDisclosure="false">
+            <f:facet name="toolbar">
+                    <!--<af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                id="b1"/>-->
+                    <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                               id="b1"/>
+                </f:facet>
+             <af:panelGroupLayout id="pgl1" layout="horizontal">
+                    <af:region value="#{bindings.emptableTF1.regionModel}" id="r1"/>
+                    <af:spacer width="50" height="10" id="s1"/>
+                    <af:region value="#{bindings.empformTF1.regionModel}" id="r2"/>
+                </af:panelGroupLayout>
+             
+        </af:panelBox>
+        </af:form>
+    </af:document>
+</f:view>

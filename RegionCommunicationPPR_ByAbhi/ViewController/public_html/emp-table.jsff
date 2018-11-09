@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1">
+    <af:table value="#{bindings.Employees_VO1.collectionModel}" var="row" rows="#{bindings.Employees_VO1.rangeSize}"
+              emptyText="#{bindings.Employees_VO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+              rowBandingInterval="0" selectedRowKeys="#{bindings.Employees_VO1.collectionModel.selectedRow}"
+              selectionListener="#{bindings.Employees_VO1.collectionModel.makeCurrent}" rowSelection="single"
+              fetchSize="20" id="t1">
+      <af:column headerText="#{bindings.Employees_VO1.hints.EmployeeId.label}" id="c1">
+        <af:outputText value="#{row.EmployeeId}" shortDesc="#{bindings.Employees_VO1.hints.EmployeeId.tooltip}"
+                       id="ot1">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Employees_VO1.hints.EmployeeId.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.FirstName.label}" id="c2">
+        <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.Employees_VO1.hints.FirstName.tooltip}" id="ot2"/>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.LastName.label}" id="c3">
+        <af:outputText value="#{row.LastName}" shortDesc="#{bindings.Employees_VO1.hints.LastName.tooltip}" id="ot3"/>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.PhoneNumber.label}" id="c4">
+        <af:outputText value="#{row.PhoneNumber}" shortDesc="#{bindings.Employees_VO1.hints.PhoneNumber.tooltip}"
+                       id="ot4"/>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.Salary.label}" id="c5">
+        <af:outputText value="#{row.Salary}" shortDesc="#{bindings.Employees_VO1.hints.Salary.tooltip}" id="ot5">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Employees_VO1.hints.Salary.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.ManagerId.label}" id="c6">
+        <af:outputText value="#{row.ManagerId}" shortDesc="#{bindings.Employees_VO1.hints.ManagerId.tooltip}" id="ot6">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Employees_VO1.hints.ManagerId.format}"/>
+        </af:outputText>
+      </af:column>
+      <af:column headerText="#{bindings.Employees_VO1.hints.DepartmentId.label}" id="c7">
+        <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.Employees_VO1.hints.DepartmentId.tooltip}"
+                       id="ot7">
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.Employees_VO1.hints.DepartmentId.format}"/>
+        </af:outputText>
+      </af:column>
+    </af:table>
+  </af:panelGroupLayout>
+</ui:composition>

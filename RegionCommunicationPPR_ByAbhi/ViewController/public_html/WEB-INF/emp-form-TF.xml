@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="emp-form-TF">
+    <default-activity>emp-form</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <input-parameter-definition id="__1">
+      <name>employeeIdParam</name>
+      <value>#{pageFlowScope.employeeIdParam}</value>
+      <class>oracle.jbo.domain.Number</class>
+    </input-parameter-definition>
+    <view id="emp-form">
+      <page>/emp-form.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
